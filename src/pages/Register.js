@@ -16,7 +16,7 @@ const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://127.0.0.1:5001/api/users/signup', { name, email, password, type });
+      const { data } = await axios.post('https://online-fitness-platform-backend.onrender.com/api/users/signup', { name, email, password, type });
       console.log(data)
       localStorage.setItem('token', data.token);
       // localStorage.setItem('role', data.role);
